@@ -19,7 +19,7 @@ public class Result<TValue, TError>
     public Result(TError err)
     {
         _value = default;
-        IsError = false;
+        IsError = true;
         _error = err;
     }
 

@@ -1,3 +1,5 @@
+using LearnMediatr;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -9,8 +11,8 @@ builder.Services.AddMediatR(op =>
     op.RegisterServicesFromAssemblyContaining(typeof(Program));
 });
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddDbContext<TenantContext>();
+
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();

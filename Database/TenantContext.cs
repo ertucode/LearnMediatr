@@ -20,4 +20,9 @@ public class TenantContext : DbContext
     {
         options.UseSqlite($"DataSource={DbPath}");
     }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        //
+    }
 }
